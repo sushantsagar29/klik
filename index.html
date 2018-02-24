@@ -1,0 +1,188 @@
+<!doctype html>
+<!--[if gt IE 8]><!-->	<html class="no-js" lang="en"> <!--<![endif]-->
+<head w3-include-html="metatags.html">
+	<script>
+		includeHTML = function(cb) {
+		var z, i, elmnt, file, xhttp;
+		z = document.getElementsByTagName("*");
+		for (i = 0; i < z.length; i++) {
+			elmnt = z[i];
+			file = elmnt.getAttribute("w3-include-html");
+			if (file) {
+			xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4) {
+				if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+				if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+				elmnt.removeAttribute("w3-include-html");
+				includeHTML(cb);
+				}
+			}      
+			xhttp.open("GET", file, true);
+			xhttp.send();
+			return;
+			}
+		}
+		if (cb) cb();
+		};
+		includeHTML();
+</script>
+</head>
+<body class="bt-home bt-homevone">
+	<!--PreLoader Start-->
+	<div id="bt-preloader"><div class="bt-preloadericon"></div></div>
+	<!--PreLoader End-->
+	<!--Wrapper Start-->
+	<div id="bt-wrapper" class="bt-wrapper bt-haslayout">
+		<!--Header Start-->
+		<nav w3-include-html="header.html" id="bt-nav" class="bt-nav">
+		</nav>
+		<header id="bt-header" class="bt-header bt-haslayout">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="bt-navigationarea">
+						<strong class="bt-logo"><a href="index.html"><img src="images/logo.png" alt="image description"></a></strong>
+						<a class="bt-btntogglemenu" href="javascript:void(0);">
+							<img src="images/icons/icon-01.png" alt="description">
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--Header End-->
+		
+		<!--Home Slider Start-->
+		<div id="bt-homeslidervone" class="bt-homeslider bt-homeslidervone bt-haslayout">
+			<div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url(images/slider/img-01.jpg);">
+				<div class="bt-slidercontent">
+					<h1 class="pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><span>Corporate<span> Photography</span></span> </h1>
+					<div class="bt-description pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><p> </p></div>
+					<div class="bt-btnbox pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">
+						<a class="bt-btn" href="corporate.html"><span>explore</span></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url(images/slider/img-02.jpg);">
+				<div class="bt-slidercontent">
+					<h1 class="pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><span>STYLE -<span>Fashion </span></span> Photography</h1>
+					<div class="bt-description pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><p>WAY TO SAY WHO YOU ARE WITHOUT HAVING TO SPEAK</p></div>
+					<div class="bt-btnbox pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">
+						<a class="bt-btn" href="fashion.html"><span>explore</span></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url(images/slider/img-03.jpg);">
+				<div class="bt-slidercontent">
+					<h1 class="pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><span>CHILDHOOD-<span>Kids</span></span> Photography</h1>
+					<div class="bt-description pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><p>THE BEST AND BRIGHT MOMENTS WE WISH COULD HAVE LASTED FOREVER</p></div>
+					<div class="bt-btnbox pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">
+						<a class="bt-btn" href="kids.html"><span>explore</span></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url(images/slider/img-04.jpg);">
+				<div class="bt-slidercontent">
+					<h1 class="pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><span>Automobile<span> Photography</span></span> 	</h1>
+					<div class="bt-description pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><p></p></div>
+					<div class="bt-btnbox pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">
+						<a class="bt-btn" href="automobile.html"><span>explore</span></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url(images/slider/img-05.jpg);">
+				<div class="bt-slidercontent">
+					<h1 class="pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><span>UNIFORM<span> DIARIES</span></span> </h1>
+					<div class="bt-description pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><p>THE INNOCENT CHILDISHNESS WHICH IS UNCOMPARIBLE AND PRICELESS</p></div>
+					<div class="bt-btnbox pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">
+						<a class="bt-btn" href="uniform.html"><span>explore</span></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url(images/slider/img-06.jpg);">
+				<div class="bt-slidercontent">
+					<h1 class="pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><span>NATURE<span> Photography</span></span> </h1>
+					<div class="bt-description pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><p>CAPTURING POSTERITY & RECORDING LOVE FOR A SUBJECT.</p></div>
+					<div class="bt-btnbox pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">
+						<a class="bt-btn" href="nature.html"><span>explore</span></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url(images/slider/img-07.jpg);">
+				<div class="bt-slidercontent">
+					<h1 class="pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><span>PORTRAITS-<span>CAPTURING </span></span> ONES  LIKENESS</h1>
+					<div class="bt-description pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><p>PURSUITE OF HUMAN RACE FOR THOUSAND OF YEARS,FROM PAINTING OF GODS TO SELFIES</p></div>
+					<div class="bt-btnbox pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">
+						<a class="bt-btn" href="portrait.html"><span>explore</span></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url(images/slider/img-08.jpg);">
+				<div class="bt-slidercontent">
+					<h1 class="pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><span>PRE WEDDING-<span>CELEBRATE </span></span> Love</h1>
+					<div class="bt-description pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><p>SENTIMENTS AND ENDEARMENTS FOR EACH OTHER WHICH YOU RELIVE ALL YOUR LIFE</p></div>
+					<div class="bt-btnbox pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">
+						<a class="bt-btn" href="prewedding.html"><span>explore</span></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url(images/slider/img-09.jpg);">
+				<div class="bt-slidercontent">
+					<h1 class="pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><span>Travel<span> Photography</span></span> </h1>
+					<div class="bt-description pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><p></p></div>
+					<div class="bt-btnbox pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">
+						<a class="bt-btn" href="travel.html"><span>explore</span></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url(images/slider/img-10.jpg);">
+				<div class="bt-slidercontent">
+					<h1 class="pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><span>WEDDING <span>Album</span></span> </h1>
+					<div class="bt-description pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><p>LIFE LASTING IMPRESSION AS YOU TIE KNOTS AND START THE JOURNEY WITH YOUR SPOUSE</p></div>
+					<div class="bt-btnbox pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">
+						<a class="bt-btn" href="wedding.html"><span>explore</span></a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="bt-slidescount">
+				<span id="bt-totalslides" class="bt-totalslides">0</span>
+				<span class="bt-seprator"></span>
+				<span id="bt-currentslides" class="bt-currentslides">0</span>
+			</div>
+		</div>
+		<!--************************************
+				Home Slider End
+		*************************************-->
+	</div>
+	<!--************************************
+			Wrapper End
+	*************************************-->
+	<script src="js/vendor/jquery-library.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="https://maps.google.com/maps/api/js?key=AIzaSyCR-KEWAVCn52mSdeVeTqZjtqbmVJyfSus&amp;language=en"></script>
+	<script src="js/jquery.cubeportfolio.min.js"></script>
+	<script src="js/tinycolor-0.9.16.min.js"></script>
+	<script src="js/jquery.scrollTo.min.js"></script>
+	<script src="js/jquery.pogoslider.js"></script>
+	<script src="js/touchswipe.min.js"></script>
+	<script src="js/jgallery.min.js"></script>
+	<script src="js/jquery.vide.js"></script>
+	<script src="js/prettyPhoto.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/parallax.js"></script>
+	<script src="js/countTo.js"></script>
+	<script src="js/appear.js"></script>
+	<script src="js/gmap3.js"></script>
+	<script src="js/themefunction.js"></script>
+</body>
+
+</html>
