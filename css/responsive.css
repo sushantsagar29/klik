@@ -433,7 +433,7 @@
 	.bt-scene{display: none;}
 	body.bt-homevthree .bt-wrapper{width: 100%;}
 	body.bt-homevthree .bt-main{background: none;}
-	.bt-homeslider .pogoSlider-slide {background-size: 200% auto;}
+	/*.bt-homeslider .pogoSlider-slide {background-size: 200% auto;} --to fix slider image size --sushant sagar */
 	.bt-homeslidervthree .bt-slidercontent h1 {
 		font-size: 28px;
 		line-height: 30px;
