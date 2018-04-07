@@ -4,7 +4,9 @@
 <meta name="author" content="Sushant Sagar">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Klik Productions</title>
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" href="images/logo.png">
+<link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+<link rel="icon" href="images/logo.png" type="image/x-icon">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/icomoon.css">

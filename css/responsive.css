@@ -547,7 +547,7 @@
 	.bt-portfoliovfour > .bt-featuredimg > img,
 	.bt-portfoliovfive.bt-portfolioslider .item img {
 		max-width: none;
-		width: auto;
+		/*width: auto;--to fix header image in pages -- sushant*/
 		height: 400px;
 	}
 	.bt-portfoliotextbox h2 {

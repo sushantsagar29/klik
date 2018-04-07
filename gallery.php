@@ -1,32 +1,8 @@
+<?php ?>
 <!doctype html>
 <!--[if gt IE 8]><!-->	<html class="no-js" lang="en"> <!--<![endif]-->
-<head w3-include-html="metatags.html">
-	<script>
-		includeHTML = function(cb) {
-		var z, i, elmnt, file, xhttp;
-		z = document.getElementsByTagName("*");
-		for (i = 0; i < z.length; i++) {
-			elmnt = z[i];
-			file = elmnt.getAttribute("w3-include-html");
-			if (file) {
-			xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (this.readyState == 4) {
-				if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-				if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-				elmnt.removeAttribute("w3-include-html");
-				includeHTML(cb);
-				}
-			}      
-			xhttp.open("GET", file, true);
-			xhttp.send();
-			return;
-			}
-		}
-		if (cb) cb();
-		};
-		includeHTML();
-</script>
+<head>
+	<?php include('metatags.php');?>
 </head>
 <body>
 	<!--PreLoader Start-->
@@ -35,7 +11,8 @@
 	<!--Wrapper Start-->
 	<div id="bt-wrapper" class="bt-wrapper bt-haslayout">
 		<!--Header Start-->
-		<nav w3-include-html="header.html" id="bt-nav" class="bt-nav">
+		<nav id="bt-nav" class="bt-nav">
+			<?php include('header.php');?>
 		</nav>
 		<header id="bt-header" class="bt-header bt-headervfour bt-haslayout">
 			<div class="container-fluid">
@@ -45,32 +22,36 @@
 						<ul>
 							<li class="bt-active bt-hasdropdown">
 								<span>01.</span>
-								<a href="index.html">home</a>
+								<a href="index.php">home</a>
 							</li>
 							<li class="bt-hasdropdown">
 								<span>02.</span>
 								<a href="javascript:void(0);">gallery</a>
 								<ul class="bt-submenu">
-									<li><a href="automobile.html">Automobile Album</a></li>
-									<li><a href="corporate.html">Corporate Album</a></li>
-									<li><a href="fashion.html">Fashion Album</a></li>
-									<li><a href="kids.html">Kids Album</a></li>
-									<li><a href="nature.html">Nature Album</a></li>
-									<li><a href="portrait.html">Portrait Album</a></li>
-									<li><a href="prewedding.html">Pre Wedding Album</a></li>
-									<li><a href="travel.html">Travel Album</a></li>
-									<li><a href="uniform.html">Uniform Diaries</a></li>
-									<li><a href="wedding.html">Wedding Album</a></li>
+									<li><a href="automobile.php">Automobile Album</a></li>
+									<li><a href="corporate.php">Corporate Album</a></li>
+									<li><a href="fashion.php">Fashion Album</a></li>
+									<li><a href="kids.php">Kids Album</a></li>
+									<li><a href="nature.php">Nature Album</a></li>
+									<li><a href="portrait.php">Portrait Album</a></li>
+									<li><a href="prewedding.php">Pre Wedding Album</a></li>
+									<li><a href="travel.php">Travel Album</a></li>
+									<li><a href="uniform.php">Uniform Diaries</a></li>
+									<li><a href="wedding.php">Wedding Album</a></li>
 									
 								</ul>
 							</li>
 							<li class="bt-hasdropdown">
 								<span>03.</span>
-								<a href="blog.html">about us</a>
+								<a href="#">about us</a>
 							</li>
 							<li class="bt-hasdropdown">
 								<span>04.</span>
-								<a href="contactusvone.html">contact us</a>
+								<a href="#">packages</a>
+							</li>
+							<li class="bt-hasdropdown">
+								<span>05.</span>
+								<a href="#">contact us</a>
 							</li>
 							<li><a class="bt-btntogglemenu" href="javascript:void(0);"><img src="images/icons/icon-04.png" alt="image description"></a></li>
 						</ul>
@@ -89,11 +70,11 @@
 				<div class="cbp-item">
 					<article class="bt-album">
 						<figure>
-							<a href="automobile.html"><img src="images/gallery/img-01.jpg" alt="Motorsports & Automobile album"></a>
+							<a href="automobile.php"><img src="images/gallery/img-01.jpg" alt="Motorsports & Automobile album"></a>
 							<figcaption>
 								<div class="bt-titleandinfo">
 									<div class="bt-albumtitle">
-										<h3><a href="automobile.html">Motorsports & Automobile album</a></h3>
+										<h3><a href="automobile.php">Motorsports & Automobile album</a></h3>
 									</div>
 								</div>
 							</figcaption>
@@ -103,11 +84,11 @@
 				<div class="cbp-item">
 					<article class="bt-album">
 						<figure>
-							<a href="corporate.html"><img src="images/gallery/img-02.jpg" alt="Corporate Special album"></a>
+							<a href="corporate.php"><img src="images/gallery/img-02.jpg" alt="Corporate Special album"></a>
 							<figcaption>
 								<div class="bt-titleandinfo">
 									<div class="bt-albumtitle">
-										<h3><a href="corporate.html">Corporate Special album</a></h3>
+										<h3><a href="corporate.php">Corporate Special album</a></h3>
 									</div>
 								</div>
 							</figcaption>
@@ -117,11 +98,11 @@
 				<div class="cbp-item">
 					<article class="bt-album">
 						<figure>
-							<a href="fashion.html"><img src="images/gallery/img-03.jpg" alt="Fashion special album"></a>
+							<a href="fashion.php"><img src="images/gallery/img-03.jpg" alt="Fashion special album"></a>
 							<figcaption>
 								<div class="bt-titleandinfo">
 									<div class="bt-albumtitle">
-										<h3><a href="fashion.html">Fashion special album</a></h3>
+										<h3><a href="fashion.php">Fashion special album</a></h3>
 									</div>
 								</div>
 							</figcaption>
@@ -131,11 +112,11 @@
 				<div class="cbp-item">
 					<article class="bt-album">
 						<figure>
-							<a href="kids.html"><img src="images/gallery/img-04.jpg" alt="Kids album"></a>
+							<a href="kids.php"><img src="images/gallery/img-04.jpg" alt="Kids album"></a>
 							<figcaption>
 								<div class="bt-titleandinfo">
 									<div class="bt-albumtitle">
-										<h3><a href="kids.html">Kids album</a></h3>
+										<h3><a href="kids.php">Kids album</a></h3>
 									</div>
 								</div>
 							</figcaption>
@@ -145,11 +126,11 @@
 				<div class="cbp-item">
 					<article class="bt-album">
 						<figure>
-							<a href="nature.html"><img src="images/gallery/img-05.jpg" alt="Nature & Landscapes album"></a>
+							<a href="nature.php"><img src="images/gallery/img-05.jpg" alt="Nature & Landscapes album"></a>
 							<figcaption>
 								<div class="bt-titleandinfo">
 									<div class="bt-albumtitle">
-										<h3><a href="nature.html">Nature & Landscapes album</a></h3>
+										<h3><a href="nature.php">Nature & Landscapes album</a></h3>
 									</div>
 								</div>
 							</figcaption>
@@ -159,11 +140,11 @@
 				<div class="cbp-item">
 					<article class="bt-album">
 						<figure>
-							<a href="portrait.html"><img src="images/gallery/img-06.jpg" alt="Portraits album"></a>
+							<a href="portrait.php"><img src="images/gallery/img-06.jpg" alt="Portraits album"></a>
 							<figcaption>
 								<div class="bt-titleandinfo">
 									<div class="bt-albumtitle">
-										<h3><a href="portrait.html">Portraits album</a></h3>
+										<h3><a href="portrait.php">Portraits album</a></h3>
 									</div>
 								</div>
 							</figcaption>
@@ -173,11 +154,11 @@
 				<div class="cbp-item">
 					<article class="bt-album">
 						<figure>
-							<a href="prewedding.html"><img src="images/gallery/img-07.jpg" alt="Pre Wedding special album"></a>
+							<a href="prewedding.php"><img src="images/gallery/img-07.jpg" alt="Pre Wedding special album"></a>
 							<figcaption>
 								<div class="bt-titleandinfo">
 									<div class="bt-albumtitle">
-										<h3><a href="prewedding.html">Pre Wedding special album</a></h3>
+										<h3><a href="prewedding.php">Pre Wedding special album</a></h3>
 									</div>
 								</div>
 							</figcaption>
@@ -187,11 +168,11 @@
 				<div class="cbp-item">
 					<article class="bt-album">
 						<figure>
-							<a href="travel.html"><img src="images/gallery/img-08.jpg" alt="Travel & Expedition album"></a>
+							<a href="travel.php"><img src="images/gallery/img-08.jpg" alt="Travel & Expedition album"></a>
 							<figcaption>
 								<div class="bt-titleandinfo">
 									<div class="bt-albumtitle">
-										<h3><a href="travel.html">Travel & Expedition album</a></h3>
+										<h3><a href="travel.php">Travel & Expedition album</a></h3>
 									</div>
 								</div>
 							</figcaption>
@@ -201,11 +182,11 @@
 				<div class="cbp-item">
 					<article class="bt-album">
 						<figure>
-							<a href="uniform.html"><img src="images/gallery/img-09.jpg" alt="Uniform Diaries"></a>
+							<a href="uniform.php"><img src="images/gallery/img-09.jpg" alt="Uniform Diaries"></a>
 							<figcaption>
 								<div class="bt-titleandinfo">
 									<div class="bt-albumtitle">
-										<h3><a href="uniform.html">Uniform Diaries</a></h3>
+										<h3><a href="uniform.php">Uniform Diaries</a></h3>
 									</div>
 								</div>
 							</figcaption>
@@ -215,11 +196,11 @@
 				<div class="cbp-item">
 					<article class="bt-album">
 						<figure>
-							<a href="wedding.html"><img src="images/gallery/img-10.jpg" alt="Wedding special album"></a>
+							<a href="wedding.php"><img src="images/gallery/img-10.jpg" alt="Wedding special album"></a>
 							<figcaption>
 								<div class="bt-titleandinfo">
 									<div class="bt-albumtitle">
-										<h3><a href="wedding.html">Wedding special album</a></h3>
+										<h3><a href="wedding.php">Wedding special album</a></h3>
 									</div>
 								</div>
 							</figcaption>
@@ -231,7 +212,8 @@
 		</main>
 		<!--Main End-->
 		<!--Footer Start-->
-		<footer  w3-include-html="footer.html" id="bt-footer" class="bt-footer bt-haslayout">
+		<footer id="bt-footer" class="bt-footer bt-haslayout">
+			<?php include('footer.php');?>
 		</footer>
 		<!--Footer End-->
 	</div>

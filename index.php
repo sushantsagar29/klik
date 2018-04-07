@@ -1,32 +1,8 @@
+<?php ?>
 <!doctype html>
 <!--[if gt IE 8]><!-->	<html class="no-js" lang="en"> <!--<![endif]-->
-<head w3-include-html="metatags.html">
-	<script>
-		includeHTML = function(cb) {
-		var z, i, elmnt, file, xhttp;
-		z = document.getElementsByTagName("*");
-		for (i = 0; i < z.length; i++) {
-			elmnt = z[i];
-			file = elmnt.getAttribute("w3-include-html");
-			if (file) {
-			xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (this.readyState == 4) {
-				if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-				if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-				elmnt.removeAttribute("w3-include-html");
-				includeHTML(cb);
-				}
-			}      
-			xhttp.open("GET", file, true);
-			xhttp.send();
-			return;
-			}
-		}
-		if (cb) cb();
-		};
-		includeHTML();
-</script>
+<head>
+	<?php include('metatags.php');?>
 </head>
 <body class="bt-home bt-homevone">
 	<!--PreLoader Start-->
@@ -35,13 +11,14 @@
 	<!--Wrapper Start-->
 	<div id="bt-wrapper" class="bt-wrapper bt-haslayout">
 		<!--Header Start-->
-		<nav w3-include-html="header.html" id="bt-nav" class="bt-nav">
+		<nav id="bt-nav" class="bt-nav">
+			<?php include('header.php');?>
 		</nav>
 		<header id="bt-header" class="bt-header bt-haslayout">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="bt-navigationarea">
-						<strong class="bt-logo"><a href="index.html"><img src="images/logo.png" alt="image description"></a></strong>
+						<strong class="bt-logo"><a href="index.php"><img src="images/logo.png" alt="image description"></a></strong>
 						<a class="bt-btntogglemenu" href="javascript:void(0);">
 							<img src="images/icons/icon-01.png" alt="description">
 						</a>
@@ -58,7 +35,7 @@
 					<h1 class="pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><span>Corporate<span> Photography</span></span> </h1>
 					<div class="bt-description pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><p>We have covered for the esteemed brands such as DTDC, Maruti Suzuki, TATA motors, Motosport Park, etc.</p></div>
 					<div class="bt-btnbox pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">
-						<a class="bt-btn" href="corporate.html"><span>explore</span></a>
+						<a class="bt-btn" href="corporate.php"><span>explore</span></a>
 					</div>
 				</div>
 			</div>
@@ -68,7 +45,7 @@
 					<h1 class="pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><span>Style - <span>Fashion </span></span> Photography</h1>
 					<div class="bt-description pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><p>Way to say who you are without having to speak</p></div>
 					<div class="bt-btnbox pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">
-						<a class="bt-btn" href="fashion.html"><span>explore</span></a>
+						<a class="bt-btn" href="fashion.php"><span>explore</span></a>
 					</div>
 				</div>
 			</div>
@@ -78,7 +55,7 @@
 					<h1 class="pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><span>Childhood - <span>Kids</span></span> Photography</h1>
 					<div class="bt-description pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><p>The best and bright moments we wish could have lasted forever</p></div>
 					<div class="bt-btnbox pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">
-						<a class="bt-btn" href="kids.html"><span>explore</span></a>
+						<a class="bt-btn" href="kids.php"><span>explore</span></a>
 					</div>
 				</div>
 			</div>
@@ -88,7 +65,7 @@
 					<h1 class="pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">Motorsports - <span>Automobile<span> Photography</span></span> 	</h1>
 					<div class="bt-description pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><p>From roaring race cars to screaming superbikes, from sub minus temperatures to scorching heat, We have done it all.</p></div>
 					<div class="bt-btnbox pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">
-						<a class="bt-btn" href="automobile.html"><span>explore</span></a>
+						<a class="bt-btn" href="automobile.php"><span>explore</span></a>
 					</div>
 				</div>
 			</div>
@@ -98,7 +75,7 @@
 					<h1 class="pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">My<span>Uniform<span> diaries</span></span> </h1>
 					<div class="bt-description pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><p>The innocent childishness which is uncomparible and priceless</p></div>
 					<div class="bt-btnbox pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">
-						<a class="bt-btn" href="uniform.html"><span>explore</span></a>
+						<a class="bt-btn" href="uniform.php"><span>explore</span></a>
 					</div>
 				</div>
 			</div>
@@ -108,7 +85,7 @@
 					<h1 class="pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">Nature - <span>Landscape<span> Photography</span></span> </h1>
 					<div class="bt-description pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><p>Capturing posterity & recording love for a subject.</p></div>
 					<div class="bt-btnbox pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">
-						<a class="bt-btn" href="nature.html"><span>explore</span></a>
+						<a class="bt-btn" href="nature.php"><span>explore</span></a>
 					</div>
 				</div>
 			</div>
@@ -118,17 +95,17 @@
 					<h1 class="pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><span>Portraits - <span>capturing </span></span> ones  likeness</h1>
 					<div class="bt-description pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><p>Pursuit of human race for thousand of years,from painting of gods to selfies</p></div>
 					<div class="bt-btnbox pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">
-						<a class="bt-btn" href="portrait.html"><span>explore</span></a>
+						<a class="bt-btn" href="portrait.php"><span>explore</span></a>
 					</div>
 				</div>
 			</div>
 
-			<div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url(images/slider/img-08.jpg);">
+			<div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url(images/gallery/prewedding/prewedding-8.jpg);">
 				<div class="bt-slidercontent">
-					<h1 class="pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><span>PRE WEDDING - <span>CELEBRATE </span></span> Love</h1>
-					<div class="bt-description pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><p>SENTIMENTS AND ENDEARMENTS FOR EACH OTHER WHICH YOU RELIVE ALL YOUR LIFE</p></div>
+					<h1 class="pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><span>Pre Wedding - <span>Celebrate </span></span> Love</h1>
+					<div class="bt-description pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><p>Sentiments and endearments for each other which you relive all your life</p></div>
 					<div class="bt-btnbox pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">
-						<a class="bt-btn" href="prewedding.html"><span>explore</span></a>
+						<a class="bt-btn" href="prewedding.php"><span>explore</span></a>
 					</div>
 				</div>
 			</div>
@@ -138,7 +115,7 @@
 					<h1 class="pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">Travel & <span>Expedition<span> Photography</span></span> </h1>
 					<div class="bt-description pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><p>Our team loves exploring each and every city we go through our lenses especially cultures, peoples, the architectures of the cities.</p></div>
 					<div class="bt-btnbox pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">
-						<a class="bt-btn" href="travel.html"><span>explore</span></a>
+						<a class="bt-btn" href="travel.php"><span>explore</span></a>
 					</div>
 				</div>
 			</div>
@@ -148,7 +125,7 @@
 					<h1 class="pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><span>Wedding <span>Album</span></span> </h1>
 					<div class="bt-description pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500"><p>Life lasting impression as you tie knots and start the journey with your spouse</p></div>
 					<div class="bt-btnbox pogoSlider-slide-element" data-in="fade" data-out="fade" data-duration="1500">
-						<a class="bt-btn" href="wedding.html"><span>explore</span></a>
+						<a class="bt-btn" href="wedding.php"><span>explore</span></a>
 					</div>
 				</div>
 			</div>

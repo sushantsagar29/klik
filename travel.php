@@ -1,32 +1,8 @@
+<?php ?>
 <!doctype html>
 <!--[if gt IE 8]><!-->	<html class="no-js" lang="en"> <!--<![endif]-->
-<head w3-include-html="metatags.html">
-	<script>
-		includeHTML = function(cb) {
-		var z, i, elmnt, file, xhttp;
-		z = document.getElementsByTagName("*");
-		for (i = 0; i < z.length; i++) {
-			elmnt = z[i];
-			file = elmnt.getAttribute("w3-include-html");
-			if (file) {
-			xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (this.readyState == 4) {
-				if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-				if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-				elmnt.removeAttribute("w3-include-html");
-				includeHTML(cb);
-				}
-			}      
-			xhttp.open("GET", file, true);
-			xhttp.send();
-			return;
-			}
-		}
-		if (cb) cb();
-		};
-		includeHTML();
-</script>
+<head>
+	<?php include('metatags.php');?>
 </head>
 <body>
 	<!--PreLoader Start-->
@@ -35,11 +11,12 @@
 	<!--Wrapper Start-->
 	<div id="bt-wrapper" class="bt-wrapper bt-haslayout">
 		<!--Header Start-->
-		<nav w3-include-html="header.html" id="bt-nav" class="bt-nav">
+		<nav id="bt-nav" class="bt-nav">
+			<?php include('header.php');?>
 		</nav>
 		<header id="bt-header" class="bt-header bt-haslayout">
 			<div class="container-fluid">
-				<strong class="bt-logo"><a href="index.html"><img src="images/logo.png" alt="image description"></a></strong>
+				<strong class="bt-logo"><a href="index.php"><img src="images/logo.png" alt="image description"></a></strong>
 				<a class="bt-btntogglemenu" href="javascript:void(0);">
 					<img src="images/icons/icon-01.png" alt="description">
 				</a>
@@ -150,15 +127,15 @@
 							<div class="container">
 								<ul class="bt-postnav">
 									<li>
-										<h3><a href="prewedding.html">Pre Wedding Album</a></h3>
-										<a href="prewedding.html">
+										<h3><a href="prewedding.php">Pre Wedding Album</a></h3>
+										<a href="prewedding.php">
 											<i class="icon-arrow-left22"></i>
 											<span>Previous Post</span>
 										</a>
 									</li>
 									<li>
-										<h3><a href="uniform.html">Uniform Diaries</a></h3>
-										<a href="uniform.html">
+										<h3><a href="uniform.php">Uniform Diaries</a></h3>
+										<a href="uniform.php">
 											<span>next Post</span>
 											<i class="icon-arrow-right22"></i>
 										</a>
@@ -172,7 +149,8 @@
 		</main>
 		<!--Main End-->
 		<!--Footer Start-->
-		<footer  w3-include-html="footer.html" id="bt-footer" class="bt-footer bt-haslayout">
+		<footer id="bt-footer" class="bt-footer bt-haslayout">
+			<?php include('footer.php');?>
 		</footer>
 		<!--Footer End-->
 	</div>
