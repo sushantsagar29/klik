@@ -8,7 +8,7 @@
 		</li>
 		<li class="bt-hasdropdown">
 			<span>02.</span>
-			<a href="aboutusv2.php">about us</a>
+			<a href="about.php">about us</a>
 		</li>
 		<li class="bt-hasdropdown">
 			<span>03.</span>
@@ -16,7 +16,7 @@
 		</li>
 		<li class="bt-hasdropdown">
 			<span>04.</span>
-			<a href="contactusvtwo.php">contact Us</a>
+			<a href="contact.php">contact Us</a>
 		</li>
 	</ul>
 	<ul class="bt-navinfo">
