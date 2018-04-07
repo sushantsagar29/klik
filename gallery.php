@@ -43,7 +43,7 @@
 							</li>
 							<li class="bt-hasdropdown">
 								<span>03.</span>
-								<a href="#">about us</a>
+								<a href="about.php">about us</a>
 							</li>
 							<li class="bt-hasdropdown">
 								<span>04.</span>
@@ -51,7 +51,7 @@
 							</li>
 							<li class="bt-hasdropdown">
 								<span>05.</span>
-								<a href="#">contact us</a>
+								<a href="contact.php">contact us</a>
 							</li>
 							<li><a class="bt-btntogglemenu" href="javascript:void(0);"><img src="images/icons/icon-04.png" alt="image description"></a></li>
 						</ul>
@@ -59,12 +59,8 @@
 				</div>
 			</div>
 		</header>
-		<!--************************************
-				Header End
-		*************************************-->
-		<!--************************************
-				Main Start
-		*************************************-->
+		<!--Header End-->
+		<!--Main Start-->
 		<main id="bt-main" class="bt-main bt-haslayout" style="margin-bottom:75px;">
 			<div id="bt-threecolumnscubegalleryvtwo" class="bt-photogallery bt-photogallerythreecolumns bt-photogallerythreecolumnsvtwo bt-threecolumnscubegallery cbp">
 				<div class="cbp-item">
@@ -220,7 +216,6 @@
 	<!--Wrapper End-->
 	<script src="js/vendor/jquery-library.js"></script>
 	<script src="js/vendor/bootstrap.min.js"></script>
-	<script src="https://maps.google.com/maps/api/js?key=AIzaSyCR-KEWAVCn52mSdeVeTqZjtqbmVJyfSus&amp;language=en"></script>
 	<script src="js/jquery.cubeportfolio.min.js"></script>
 	<script src="js/tinycolor-0.9.16.min.js"></script>
 	<script src="js/jquery.scrollTo.min.js"></script>
