@@ -6,23 +6,12 @@ if(count($_POST)<4){
 	exit;
 }
 
-foreach($_POST as $key=>$value)
-{
-if(strpos($value, 'ransisco') !== FALSE)
-{
-//header('form.php');
-$response =  "Don't fuck around... XSS and San Fransisco won't work...";
-echo $response;
-exit;
-}//end of if
-else
-{
+foreach($_POST as $key=>$value){
 $value = trim($value);
 $value = strip_tags($value);
 $value = stripslashes($value);
-$postdata[$key]=$value; //$postdata['email']
-}	//end of else
-}	//end of foreach
+$postdata[$key]=$value;
+}	
 
 #filtration of all the inputs
 
@@ -48,7 +37,7 @@ if((strlen($postdata['message'])<1)){
 $response .= "Empty/Invalid message"."<br />";
 $check = 0;
 }
-$phone = ($postdata['phonenumber']!=null)?$postdata['phonenumber']:'Not provided';
+$phone = ($postdata['phonenumber']!=null && $postdata['phonenumber']!='')?$postdata['phonenumber']:"Not provided";
 
 if($check == 0){ #if any of the above if condition becomes true
 	echo $response;
@@ -71,7 +60,7 @@ if($check == 0){ #if any of the above if condition becomes true
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=iso-8859-1" . "\r\n";
 
-    if(mail($to, $subject, $email_message, $headers)){
+    if(mail($to, $subject, $email_message, $headers, "-f info@klik.in.net")){
 		echo "Mail has been successfully sent. We will get back to you very soon";
 	}
 	else{

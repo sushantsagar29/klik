@@ -5,11 +5,11 @@
 				<div class="bt-navandcopyright">
 					<nav class="bt-addnav">
 						<ul>
-							<li><a href="#">Home</a></li>
-							<li><a href="#">ABOUT US</a></li>
-							<li><a href="#">GALLERY</a></li>
+							<li><a href="index.php">Home</a></li>
+							<li><a href="about.php">ABOUT US</a></li>
+							<li><a href="gallery.php">GALLERY</a></li>
 							<li><a href="#">PACKAGES</a></li>
-							<li><a href="#">CONTACT US</a></li>
+							<li><a href="contact.php">CONTACT US</a></li>
 						</ul>
 					</nav>
 					<span class="bt-copyright">Copyrights 2018 Klik Productions. All rights reserved | Designed By - <a href="http://sushantsagar.tk/" target="_blank">Sushant Sagar</a></span>

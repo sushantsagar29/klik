@@ -46,7 +46,7 @@
 							<div class="bt-member bt-memberdetail">
 								<div class="bt-membercontent">
 									<div class="bt-membername">
-										<h3>Subham</h3>
+										<h3>Shubham</h3>
 									</div>
 									<span class="bt-memberdesignation">Co-Founder</span>
 									<div class="bt-description">
